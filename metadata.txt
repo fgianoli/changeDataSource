@@ -9,6 +9,7 @@
 [general]
 name=changeDataSource
 qgisMinimumVersion=3.0
+qgisMaximumVersion=4.99
 description=Right click on layer tree to change single layer datasource of click on icon to change datasources globally
 version=3.1
 author=enrico ferreguti
