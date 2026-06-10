@@ -23,7 +23,7 @@
 import os.path
 
 from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication, Qt, pyqtSignal
-from qgis.PyQt.QtGui import QIcon
+from qgis.PyQt.QtGui import QIcon, QFontMetrics
 from qgis.PyQt.QtWidgets import (
     QAction,
     QApplication,
@@ -306,7 +306,7 @@ class changeDataSource(object):
         method that returns a preformatted qlineedit widget
         '''
         edit = QLineEdit(parent=self.dlg.layerTable)
-        idealWidth = QApplication.instance().fontMetrics().horizontalAdvance(txt)
+        idealWidth = QFontMetrics(QApplication.instance().font()).horizontalAdvance(txt)
         edit.setMinimumWidth(idealWidth)
         if column == 2:
             edit.setMaximumWidth(60)
